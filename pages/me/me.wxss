@@ -1,0 +1,88 @@
+.avatar-wrapper {
+  background: #E7624F;
+  padding: 50rpx 0;
+}
+ 
+.avatar-wrapper .avatar {
+  margin: 0 auto;
+  text-align: center;
+}
+ 
+.avatar-wrapper .avatar image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.avatar-wrapper button{
+  width: 300rpx;
+}
+ 
+.avatar-wrapper .text {
+  text-align: center;
+  color: #fff;
+}
+ 
+.listimg image {
+  vertical-align: middle;
+  width: 55rpx;
+  height: 55rpx;
+  margin-left: -8rpx;
+  margin-right: 10rpx;
+}
+ 
+.content{
+  display: flex;
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  background-color: #fff;
+  font-size: 31rpx;
+  padding-right:0;
+}
+ 
+/*分割线样式*/
+.divLine{
+ background: #F0F0F0;
+ width: 100%;
+ height: 5rpx;
+}
+ 
+.arrows image {
+  vertical-align: middle;
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 500rpx;
+}
+
+.progress button {
+  display: flex;
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  background-color: #fff;
+  font-size: 31rpx;
+  padding-right:0;
+}
+
+.progress button::after, .list-wrapper button::after {
+  border: none;
+}
+
+.progress .ico image {
+  vertical-align: middle;
+  width: 55rpx;
+  height: 55rpx;
+  margin-left: -8rpx;
+  margin-right: 10rpx;
+} 
+
+.progress .progress_text {
+  width: 625rpx;
+  text-align: left;
+}
+
+.progress .point image {
+  vertical-align: middle;
+  width: 35rpx;
+  height: 35rpx;
+}

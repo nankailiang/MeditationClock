@@ -1,0 +1,11 @@
+/* pages/author/author.wxss */
+text {
+  display: block;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color: #E7624F;
+}

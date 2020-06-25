@@ -1,0 +1,101 @@
+/**index.wxss**/
+/* page {
+  overflow: hidden;
+  background: #E7624F;
+} */
+.slider {
+  width: 650rpx;
+  margin: 40rpx auto;
+  padding-top: 15rpx;
+}
+.task_text {
+  height: 200rpx;
+  margin: 40rpx auto;
+  text-align: center;
+}
+.task_text .task_title{
+  font-size: 35rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.task_text .task_desc{
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #999999;
+}
+.task_cate {
+  width: 660rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.task_cate .cate_item {
+  width: 220rpx;
+  height: 130rpx;
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+.task_cate .cate_item .cate_icon {
+  height: 70rpx;
+}
+.task_cate .cate_item .cate_icon image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.task_cate .cate_item .cate_text {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.task_cate .cate_item .cate_text_active {
+  color: #E7624F;
+}
+.start {
+  width: 280rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  margin: 40rpx auto;
+  border: 2rpx solid #E7624F;
+  color: #E7624F;
+  border-radius: 20rpx;
+}
+.clock {
+  overflow: hidden;
+  background: #E7624F;
+}
+.progress {
+  width: 400rpx;
+  height: 400rpx;
+  margin: 140rpx auto;
+  position: relative;
+}
+.progress .progress_bg, .progress .progress_active  {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400rpx;
+  height: 400rpx;
+}
+.progress .progress_text{
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  left: 120rpx;
+  top: 170rpx;
+}
+.btns .okBtn, .btns .pauseBtn, .btns .continueBtn, .btns .cancleBtn {
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ffffff;
+  border: 3rpx solid #ffffff;
+  border-radius: 20rpx;
+  margin: 0 auto 20rpx auto;
+}

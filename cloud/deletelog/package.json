@@ -1,0 +1,14 @@
+{
+  "name": "deletelog",
+  "version": "1.0.0",
+  "description": "删除该用户所有的日志文件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nankailiang",
+  "license": "ISC",
+  "dependencies": {
+    "wx-server-sdk": "~1.8.3"
+  }
+}

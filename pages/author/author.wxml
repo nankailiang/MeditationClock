@@ -1,0 +1,6 @@
+<!--pages/author/author.wxml-->
+<text>作者是一个前端程序员</text>
+<text>欢迎技术探讨和bug反馈</text>
+<text>联系方式：</text>
+<text>QQ：1003857254</text>
+<text>微信：17861622986</text>

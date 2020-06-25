@@ -1,0 +1,14 @@
+{
+  "name": "createlog",
+  "version": "1.0.0",
+  "description": "向数据库插入该用户的日志文件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nankailiang",
+  "license": "ISC",
+  "dependencies": {
+    "wx-server-sdk": "~1.8.3"
+  }
+}

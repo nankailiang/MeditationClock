@@ -1,0 +1,59 @@
+/* pages/guide/guide.wxss */
+.welcome {
+  background-color: #E7624F;
+  width: 100%;
+  height: 400rpx;
+}
+
+.welcome .welcome_title {
+  display: block;
+  height: 180rpx;
+  line-height: 180rpx;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 60rpx;
+}
+
+.welcome .welcome_text {
+  display: block;
+  height: 220rpx;
+  font-weight: 700;
+  font-size: 35rpx;
+  margin:0 30rpx ;
+  text-indent:2em;
+  color: #fff;
+}
+
+.main {
+  margin:30rpx;
+  text-align: center;
+}
+
+.main .title {
+  color: #E7624F;
+  font-size: 35rpx;
+  font-weight: 700;
+}
+
+.main .introduce {
+  margin-top: 60rpx;
+}
+
+.introduce .introduce_nav {
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.introduce .introduce_fun {
+  text-align: left;
+}
+
+.introduce .introduce_fun image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.introduce .introduce_pic image {
+  width: 550rpx;
+  height: 950rpx;
+}

@@ -1,0 +1,72 @@
+.sum {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+  height: 350rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 3rpx solid #eeeeee;
+}
+.sum .sum_item {
+  width: 375rpx;
+  height: 160rpx;
+  text-align: center;
+}
+.sum .sum_item .sum_item_title {
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 30rpx;
+  color: #6B747E;
+}
+.sum .sum_item .sum_item_val {
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #E7624F;
+}
+.detail {
+  width: 700rpx;
+  margin: 0 auto;
+}
+.detail_title {
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.detail_title .detail_title_text {
+  flex: 1;
+  font-size: 30rpx;
+}
+.detail_title .detail_title_type {
+  flex: 1;
+  text-align: right;
+  font-size: 25rpx;
+}
+.detail_title .detail_title_type text{
+  padding-left: 10rpx;
+}
+.active {
+  color: #E7624F;
+}
+.list_item {
+  display: flex;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding-top: 15rpx;
+}
+/* .list_item > view {
+  width: 200rpx;
+} */
+.list_item .list_item_date {
+  width: 300rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.list_item .list_item_cate {
+  width: 200rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.list_item .list_item_time {
+  width: 200rpx;
+  font-size: 30rpx;
+  text-align: right;
+}

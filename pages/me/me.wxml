@@ -1,0 +1,64 @@
+<view class="mine-wrapper">
+
+	<view class="avatar-wrapper">
+		<view>
+			<view class="avatar">
+				<image style="border-radius:50%;" src="{{userinfo.avatarUrl ? userinfo.avatarUrl:'/images/user1.png'}}"></image>
+			</view>
+			<view class="text" wx:if="{{name}}">
+				<text>{{name}}</text>
+			</view>
+			<view class="text" wx:if="{{!name}}">
+				<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">登录</button>
+			</view>
+		</view>
+	</view>
+
+	<view class="list-wrapper">
+		<view class="alllists">
+			<block wx:for="{{menuitems}}" wx:key="menu_for">
+				<navigator url="{{item.url}}" class="lists" wx:for-index="index" data-index='{{index}}' bindtap="empty">
+					<button class='content' open-type="#">
+						<view class="listimg">
+							<image src="{{item.icon}}"></image>
+						</view>
+						<view class="listtext">{{item.text}}</view>
+						<view class="arrows">
+							<image src="{{item.arrows}}"></image>
+						</view>
+					</button>
+				</navigator>
+				<!-- 分割线 -->
+				<view class="divLine"></view>
+			</block>
+		</view>
+	</view>
+
+	<view class="progress">
+		<view class="service">
+			<button open-type="contact">
+				<view class="ico">
+					<image src="/images/consult.png"></image>
+				</view>
+				<view class="progress_text">联系客服</view>
+				<view class="point">
+					<image src="/images/arrows.png"></image>
+				</view>
+			</button>
+		</view>
+		<view class="divLine"></view>
+		<view class="feedback">
+			<button open-type="feedback">
+				<view class="ico">
+					<image src="/images/feedback.png"></image>
+				</view>
+				<view class="progress_text">意见反馈</view>
+				<view class="point">
+					<image src="/images/arrows.png"></image>
+				</view>
+			</button>
+		</view>
+		<view class="divLine"></view>
+	</view>
+
+</view>

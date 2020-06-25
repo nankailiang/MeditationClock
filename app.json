@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/me/me",
+    "pages/guide/guide",
+    "pages/author/author"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E7624F",
+    "navigationBarTitleText": "禅定时钟",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/binggan.png",
+        "selectedIconPath": "./images/binggan-active.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "统计",
+        "iconPath": "./images/danhuang.png",
+        "selectedIconPath": "./images/danhuang-active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./images/huasheng.png",
+        "selectedIconPath": "./images/huasheng-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

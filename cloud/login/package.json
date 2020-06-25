@@ -1,0 +1,14 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "获取用户登录信息",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nankailiang",
+  "license": "ISC",
+  "dependencies": {
+    "wx-server-sdk": "~1.8.3"
+  }
+}

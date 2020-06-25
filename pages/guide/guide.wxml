@@ -1,0 +1,22 @@
+<!--pages/guide/guide.wxml-->
+<view class="welcome">
+	<text class="welcome_title">欢迎来到  禅定时钟</text>
+	<text class="welcome_text">禅定时钟是一款用来管理时间的小程序，把每天的任务时间进行记录，将你的记录可视化，让你清楚的知道自己每天干了什么，花了多长时间，从而改进自己的生活。</text>
+</view>
+
+<view class="main">
+	<view class="title">小程序使用介绍</view>
+
+	<view class="introduce" wx:for="{{content}}" wx:key="cont_key">
+		<view class="introduce_nav">{{item.nav}}</view>
+		<view class="introduce_fun">
+			<image src="{{item.small}}"></image>{{item.fun}}
+		</view>
+		<view class="introduce_fun">
+			<image src="{{item.small}}"></image>{{item.fun1}}
+		</view>
+		<view class="introduce_pic">
+			<image src="{{item.pic}}"></image>
+		</view>
+	</view>
+</view>
