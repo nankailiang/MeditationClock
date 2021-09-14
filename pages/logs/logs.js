@@ -1,8 +1,11 @@
 //logs.js
 const util = require('../../utils/util.js')
+const app = getApp();
+const db = wx.cloud.database()
 
 Page({
   data: {
+    openid:app.globalData.openid,
     logs: [],
     dayList: [],
     list: [],
@@ -53,10 +56,11 @@ Page({
       }
     ]
   },
-  getlogs: function () {
-    const that = this;
-    const ui = wx.getStorageSync('userinfo')
-    if (!ui.openid) {
+  onShow: function () {
+    // this.getlogs();
+    var _this = this;
+    var user = wx.getStorageSync('user')
+    if (!user) {
       wx.showModal({
         title: '温馨提示',
         content: '登录才可查看统计',
@@ -72,61 +76,51 @@ Page({
         }
       })
     } else {
-      wx.cloud.callFunction({
-        name: "getlogs",
-        data: {
-          openid: ui.openid
-        },
-        success: res => {
-          var date = new Date();
-          //年  
-          var Y = date.getFullYear();
-          //月  
-          var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
-          //日  
-          var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+      db.collection('logs').where({
+        openid : app.globalData.openid
+      })
+      .get({
+        success: function(res) {
+          var date = new Date();          
+          var Y = date.getFullYear();//年           
+          var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);//月            
+          var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();//日  
           var daylog = "sum[" + 0 + "].val";
           var sumlog = "sum[" + 1 + "].val";
           var daytime = "sum[" + 2 + "].val";
           var sumtime = "sum[" + 3 + "].val";
           var day = 0;
           var dsday = 0;
-          for (var i = 0; i < res.result.data.length; i++) {
-            if (res.result.data[i].Y == Y && res.result.data[i].M == M && res.result.data[i].D == D) {
+          for (var i = 0; i < res.data.length; i++) {
+            if (res.data[i].Y == Y && res.data[i].M == M && res.data[i].D == D) {
               day = day + 1;
-              dsday = dsday + parseInt(res.result.data[i].time)
+              dsday = dsday + parseInt(res.data[i].time)
             }
           }
           var sum = 0;
-          for (var i = 0; i < res.result.data.length; i++) {
-            sum = sum + parseInt(res.result.data[i].time)
+          for (var i = 0; i < res.data.length; i++) {
+            sum = sum + parseInt(res.data[i].time)
           }
-          that.setData({
-            logs: res.result.data,
-            [daylog]: day,
-            [sumlog]: res.result.data.length,
+          _this.setData({
+            logs: res.data,
+            [daylog]: day,    
+            [sumlog]: res.data.length,
             [daytime]: dsday + "分钟",
             [sumtime]: sum + "分钟"
           })
           var dayList = [];
-          for (var i = 0; i < res.result.data.length; i++) {
-            if (res.result.data[i].Y == Y && res.result.data[i].M == M && res.result.data[i].D == D) {
-              dayList.push(res.result.data[i]);
-              that.setData({
+          for (var i = 0; i < res.data.length; i++) {
+            if (res.data[i].Y == Y && res.data[i].M == M && res.data[i].D == D) {
+              dayList.push(res.data[i]);
+              _this.setData({
                 dayList: dayList,
                 list:dayList
               })
             }
           }
-        },
-        fail: res => {
-          console.log("res", res)
         }
-      })
+      })     
     }
-  },
-  onShow: function () {
-    this.getlogs();
   },
   changeType: function (e) {
     var index = e.currentTarget.dataset.index;

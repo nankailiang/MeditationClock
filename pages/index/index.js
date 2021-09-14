@@ -13,7 +13,7 @@ Page({
     eTime: 290000,
     timeStr: '05:00',
     rate: '',
-    openid: '',
+    // openid: '',
     Y: '',
     M: '',
     D: '',
@@ -67,9 +67,10 @@ Page({
     })
   },
   getUserInfo: function (e) {
-    app.globalData.userInfo = e.detail.userInfo
+    var user = wx.getStorageSync('user')
+    app.globalData.userInfo = user.userInfo
     this.setData({
-      userInfo: e.detail.userInfo,
+      userInfo: user.userInfo,
       hasUserInfo: true
     })
   },
@@ -84,8 +85,8 @@ Page({
     })
   },
   start: function () {
-    const ui = wx.getStorageSync('userinfo')
-    if (!ui.openid) {
+    var user = wx.getStorageSync('user')
+    if (!user) {
       wx.showModal({
         title: '温馨提示',
         content: '登录才能进行计时',
@@ -117,7 +118,7 @@ Page({
       var s = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
 
       this.setData({
-        openid: ui.openid,
+        openid: app.globalData.openid,
         Y: Y,
         M: M,
         D: D,
@@ -254,7 +255,7 @@ Page({
         s: this.data.s,
         cateActive: this.data.cateActive,
         time: this.data.time,
-        openid: this.data.openid
+        openid: app.globalData.openid
       }
     })
   },
